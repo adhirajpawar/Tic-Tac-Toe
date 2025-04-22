@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplayer Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link to the new style.css in the public folder -->
+</head>
+<body>
+  <!-- Video Background -->
+  <video id="background-video" autoplay loop muted>
+    <source src="background-video.mp4" type="video/mp4"> <!-- Path to your background video -->
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Game Container -->
+  <div class="container">
+    <h1>Multiplayer Tic Tac Toe</h1>
+    <div id="statusDisplay">Connecting to game...</div>
+    <div id="board"></div>
+    <div id="scoreboard">
+      <h3>Scoreboard</h3>
+      <p>X: <span id="scoreX">0</span> | O: <span id="scoreO">0</span></p>
+    </div>
+
+    <!-- Modal -->
+    <div id="gameModal">
+      <div class="modal-content">
+        <h2 id="modalMessage"></h2>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
